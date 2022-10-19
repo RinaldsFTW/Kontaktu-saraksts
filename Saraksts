@@ -6,6 +6,8 @@ contacts = []
 #2. Izvadīt kontaktus
 #3. Pārtraukt darbības un iziet no programmas
 
+
+
 while(True):
   response = input('1 - add contact 2 - print contact 3 - exit: ')
   if response == '1':
@@ -25,9 +27,18 @@ while(True):
     
     contacts.append(person_contact)
 
+
+
   elif response == '2':
-    print(contacts)
+      for contact in contacts:
+        print("---CONTACT---")
+        print(f"{contact['name']} {contact['surname']}")
+        print(f"Phone: {contact['phone']}")
+        print(f"Email: {contact['email']}")
+
 
   elif response == '3':
         print('Bye bye!')
         exit()
+  else:
+    print('Please respomd with 1, 2 or 3')
